@@ -5,9 +5,9 @@ site_description: Web based 3d product rendering
 copyright: <a href="https://instavu3d.com/">instavu3d.com</a>
 theme: readthedocs
 extra_css:
-  - css/extra.css
+    - css/extra.css
 markdown_extensions:
-  - toc:
-      permalink: True
+    - toc:
+        permalink: True
 nav:
-  - Home: index.md
+    - Home: index.md
