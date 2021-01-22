@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Instavu Plugin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "InstaVu WebPlugin Usage";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Instavu Plugin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">InstaVu WebPlugin Usage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#include">Include</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-your-scene-id">Get your scene id</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewport">Viewport</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#initialize-viewport">Initialize Viewport</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#events">Events</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#also-you-can-use">Also you can use</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#variable">Variable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#loadtexture">loadTexture</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loadcolor">loadColor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resize">resize</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resetposition">resetPosition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#toimage">toImage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#getimageblob">getImageBlob</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Instavu Plugin</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>InstaVu WebPlugin Usage</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="instavu-webplugin-usage">InstaVu WebPlugin Usage</h1>
+<p>Using InstaVu web plugin you can display your product in 3D to your website. You need to load the javascript library to your website and initialize the viewport.</p>
+<h2 id="include">Include</h2>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;https://instavu3d.com/webplugin/instavu.plugin.lib.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="get-your-scene-id">Get your scene id</h2>
+<p><strong>https://instavu3d.com/webplugin/info/{API_KEY}</strong></p>
+<h2 id="viewport">Viewport</h2>
+<p>Models will display on the Viewport with the help of Renderer API. Contact administrator for your API key.</p>
+<h3 id="initialize-viewport">Initialize Viewport</h3>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;div id=&quot;3d_container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>JS:</p>
+<pre><code class="language-js">var viewport = new InstaVUPlugin({
+    container               : document.getElementById('3d_container'),
+    apiKey                  : '{API_KEY}',      //{Required} Provide by administrator
+    scene_id                : '{SCENE_ID}',     //{Required} Provide by administrator
+});
+</code></pre>
+<h3 id="events">Events</h3>
+<ul>
+<li><code>scene_load:progress</code> This event will return you the progress of scene loading</li>
+<li><code>scene_load:complete</code> Event triggered when the scene load on the viewport successfully</li>
+</ul>
+<pre><code class="language-js">viewport.addEventListener('scene_load:progress', function ( event ) {
+    console.log(event.message); // The percentage of scene loading
+});
+viewport.addEventListener('scene_load:complete', function ( event ) {
+    console.log(event.message);
+});
+</code></pre>
+<h5 id="also-you-can-use">Also you can use</h5>
+<pre><code class="language-js">viewport.on('scene_load:progress', function ( event ) {
+    console.log(event.message); // The percentage of scene loading
+});
+viewport.on('scene_load:complete', function ( event ) {
+    console.log(event.message);
+});
+</code></pre>
+<h3 id="variable">Variable</h3>
+<p>Using this variable you can get available surfaces. This will help you to load the texture on particular surface.</p>
+<pre><code class="language-js">viewport.surfaces
+
+// Data of viewport.surfaces
+// [
+//  {
+//      &quot;name&quot;: &quot;surface1&quot;,
+//      &quot;image&quot;: &quot;surface1_thumbnail.jpg&quot;
+//  },
+//  {
+//      &quot;name&quot;: &quot;surface2&quot;,
+//      &quot;image&quot;: &quot;surface2_thumbnail.jpg&quot;
+//  },
+//  {
+//      &quot;name&quot;: &quot;surface3&quot;,
+//      &quot;image&quot;: &quot;surface3_thumbnail.jpg&quot;
+//  }
+// ]
+
+// Surface Thumbnail URL
+// http://instavu3d.com/webplugin/projects/assets/&lt;scene_id&gt;/&lt;thumbnail&gt;
+</code></pre>
+<h3 id="methods">Methods</h3>
+<h4 id="loadtexture">loadTexture</h4>
+<p>Load the texture to the surface.</p>
+<p>Once the scene loaded successfully, you can load texture on the surface.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><code>name</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> Name of the surface</li>
+<li><code>textureUrl</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> Texture url</li>
+<li><code>onSuccess</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</strong> called on completion with no argument.</li>
+<li><code>onError</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</strong> called on fail to load with one argument <code>(error)</code>. <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>?</strong></li>
+<li><code>onProgress</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?</strong> called on progress loading with one argument <code>(progress)</code>. <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent#Properties">event</a>?</strong></li>
+</ul>
+<pre><code class="language-js">var url = '{TEXTURE URL}';
+viewport.loadTexture('&lt;name&gt;',url,function(){
+    //Call on success   
+}, function(error){
+    //Call on error
+},function(progress){
+    //Call on progress
+});
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-js">var url = '{TEXTURE URL}';
+for (var i = 0; i &lt; viewport.surfaces.length; i++){
+    viewport.loadTexture(viewport.surfaces[i]['name'],url, function(){
+        console.log('Texture loaded successfully');
+    });
+}
+</code></pre>
+<h4 id="loadcolor">loadColor</h4>
+<p>Load the color to the scene.</p>
+<p>Once the scene loaded successfully, you can load color on the scene.</p>
+<h5 id="parameters_1">Parameters</h5>
+<ul>
+<li><code>name</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>?</strong> Name of the surface (required)</li>
+<li><code>r</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</strong> Red color of RGB - Integer 0 to 255 (required)</li>
+<li><code>g</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</strong> Green color of RGB - Integer 0 to 255 (required)</li>
+<li><code>b</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</strong> Blue color of RGB - Integer 0 to 255 (required)</li>
+</ul>
+<pre><code class="language-js">var color = {
+    r: 212,
+    g: 112,
+    b: 32
+}
+viewport.loadColor(name, color.r,color.g,color.b);
+</code></pre>
+<h4 id="resize">resize</h4>
+<p>Resize the viewport</p>
+<h5 id="parameters_2">Parameters</h5>
+<ul>
+<li><code>width</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</strong> (Required)</li>
+<li><code>height</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?</strong> (Required)</li>
+</ul>
+<pre><code class="language-js">viewport.resize(width,height);
+</code></pre>
+<h4 id="resetposition">resetPosition</h4>
+<p>Reset the scene at begin position.</p>
+<pre><code class="language-js">viewport.resetPosition();
+</code></pre>
+<h4 id="toimage">toImage</h4>
+<p>Get base64 image of the canvas</p>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">DataURI</a>?</strong></p>
+<pre><code class="language-js">viewport.toImage();
+</code></pre>
+<h4 id="getimageblob">getImageBlob</h4>
+<p>Get Blob image of the canvas</p>
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">DataURI</a>?</strong></p>
+<pre><code class="language-js">viewport.getImageBlob();
+</code></pre>
+<h1 id="example">Example</h1>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;3d_container&quot; width=&quot;800&quot; height=&quot;600&quot;&gt;&lt;/div&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;https://instavu3d.com/webplugin/instavu.plugin.lib.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            var viewport = new InstaVUPlugin({
+                container   : document.getElementById('3d_container'),
+                apikey      : '&lt;YourAPIKey&gt;',
+                scene_id    : '&lt;YourSceneId&gt;',
+            });
+            viewport.addEventListener('scene_load:progress', function (event){
+                console.log(event.message);
+            });
+            viewport.addEventListener('scene_load:complete', function (event){
+                console.log('Scene loaded successfully');
+
+                loadTexture('&lt;TextureUrl&gt;');
+            });
+
+            function loadTexture(textureUrl){
+                //Show loader
+                for (var i = 0; i &lt; viewport.surfaces.length; i++){
+                    viewport.loadTexture(viewport.surfaces[i]['name'],textureUrl, function(){
+                        //Hide loader
+                    });
+                }
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2021-01-22 09:48:18.308038+00:00
+-->
