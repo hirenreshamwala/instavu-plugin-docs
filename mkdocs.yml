@@ -1,4 +1,4 @@
-site_name: instavuplugin
+site_name: InstaVuPlugin
 site_url: https://instavu3d.com/
 repo_url: https://github.com/hirenreshamwala/instavu-plugin-docs.git
 site_description: Web based 3d product rendering
@@ -10,4 +10,4 @@ markdown_extensions:
   - toc:
       permalink: True
 pages:
-  - API: index.md
+  - Home: index.md
