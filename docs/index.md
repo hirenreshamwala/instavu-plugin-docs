@@ -1,4 +1,4 @@
-# InstaVu WebPlugin Usage
+# InstaVu WebPlugin Usage 
 
 Using InstaVu web plugin you can display your product in 3D to your website. You need to load the javascript library to your website and initialize the viewport.
 
